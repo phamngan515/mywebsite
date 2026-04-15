@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trang chủ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+/* nền gradient */
+body{
+    background: linear-gradient(120deg,#0f172a,#1e293b);
+    color: white;
+}
+
+/* navbar */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    color:#38bdf8;
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+    position:relative;
+}
+
+/* hiệu ứng gạch chân */
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    background:#38bdf8;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* hero */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 60px;
+}
+
+/* text */
+.hero-text{
+    max-width:500px;
+    animation: fadeLeft 1s;
+}
+
+.hero-text h1{
+    font-size:40px;
+    color:#38bdf8;
+}
+
+.hero-text p{
+    margin:15px 0;
+    color:#cbd5e1;
+}
+
+/* button */
+.btn{
+    padding:12px 25px;
+    background:#38bdf8;
+    color:black;
+    border-radius:25px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+/* ảnh */
+.hero img{
+    width:500px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* animation */
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-15px)}
+}
+
+@keyframes fadeLeft{
+    from{opacity:0;transform:translateX(-50px)}
+    to{opacity:1;transform:translateX(0)}
+}
+
+/* section nhỏ bên dưới */
+.features{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    width:250px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">My Website</div>
+<nav>
+<a href="#">Trang chủ</a>
+<a href="profile.html">Giới thiệu</a>
+<a href="#">Liên hệ</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+<h1>Xin chào 👋</h1>
+<p>Đây là website cá nhân của tôi. Nơi mình chia sẻ thông tin, kỹ năng và dự án.</p>
+
+<a href="profile.html" class="btn">Xem giới thiệu</a>
+</div>
+
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+
+</section>
+
+<section class="features">
+<div class="card">
+<h3>👨‍💻 Kỹ năng</h3>
+<p>HTML, CSS, JavaScript, C++, Python</p>
+</div>
+
+<div class="card">
+<h3>📂 Dự án</h3>
+<p>Các project mình đã thực hiện</p>
+</div>
+
+<div class="card">
+<h3>📞 Liên hệ</h3>
+<p>Kết nối với mình qua mạng xã hội</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Phạm Ngân</p>
+</footer>
+
+</body>
+</html>
